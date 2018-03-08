@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders properly 1`] = `
+"<ul>
+
+   <li>mop</li>
+
+   <li>broom</li>
+
+   <li>duster</li>
+
+</ul>"
+`;
