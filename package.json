@@ -1,0 +1,16 @@
+{
+  "name": "javascriptmvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "stealconfig.js",
+  "scripts": {
+    "test": "jest",
+    "cypress:open": "cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^2.1.0",
+    "jest": "^22.4.2"
+  }
+}

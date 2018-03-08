@@ -1,0 +1,1 @@
+in “Build, Execution, Deployment” > Debugger, “Allow unsigned requests”
