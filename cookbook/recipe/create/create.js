@@ -1,28 +1,13 @@
-function createRecipe(Recipe, el, ev) {
-	ev.preventDefault();
-	el.find('[type=submit]').val('Creating...');
-	var data = el.serializeArray().reduce(function (acc, value) {
-		acc[value.name] = value.value;
-		return acc;
-	}, {});
-
-	console.log(data, el.serializeArray());
-
-	new Recipe(data).save(function () {
-		el.find('[type=submit]').val('Create');
-		el[0].reset()
-	});
-}
-
 if(typeof steal === 'undefined') {
-	console.log('hello')
+	const createRecipe = require('./utils').createRecipe;
 	module.exports = {
 		createRecipe
 	};
 } else {
-	steal('can', 'cookbook/models/recipe.js', './init.ejs', 'jquery/dom/form_params',
-		function (can, Recipe, initEJS) {
-
+	steal('can', 'cookbook/models/recipe.js', './init.ejs', 'jquery/dom/form_params', './utils.js',
+		function (can, Recipe, initEJS, ignore, utils) {
+			console.log('createRecipe', utils);
+			const  {createRecipe} = utils;
 			/**
 			 * @constructor cookbook/recipe/create
 			 * @alias RecipeCreate
